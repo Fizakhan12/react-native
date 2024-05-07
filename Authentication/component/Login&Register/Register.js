@@ -45,7 +45,6 @@ function RegisterComponent() {
     });
   }
   function registerSubmit() {
-    Alert.alert("Registered Successfully");
     if (nameVerify && emailVerify && PasswordVerify && phoneVerify) {
       console.log("called");
       const userData = {

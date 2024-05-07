@@ -34,7 +34,7 @@ import {
         .post('http://192.168.2.7:8080/user-data', {token: token})
         .then(res => {
           console.log(res.data.data);
-          setUserData(res.data.data);
+          setUserData(res.data.data);  
         });
     }
   

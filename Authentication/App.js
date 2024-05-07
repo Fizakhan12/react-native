@@ -10,13 +10,14 @@ import { useNavigation ,DrawerActions} from "@react-navigation/native";
 import DrawerContent from './DrawerContent';
 import Icon from 'react-native-vector-icons/Entypo';
 import Toast from 'react-native-toast-message';
+import {StatusBar,View} from "react-native";
 const Stack = createNativeStackNavigator();
 
 const StackNav = () => {
   const navigation=useNavigation()
   return (
     <Stack.Navigator initialRouteName='Home' screenOptions={{
-      statusBarColor: 'purple',
+      statusBarColor: 'black',
       headerStyle: { backgroundColor: 'purple' },
       headerTintColor: 'white',
       headerShown: false,
@@ -74,9 +75,12 @@ export default function App() {
   }, []);
 
   return (
+
     <NavigationContainer>
+  <StatusBar backgroundColor="black" barStyle={"default"}/>
       {isLoggedIn ? <DrawerNav /> : <LoginNav />}
       <Toast />
     </NavigationContainer>
+   
   );
 }

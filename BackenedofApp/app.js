@@ -11,7 +11,7 @@ app.use(cors({
   origin: 'http://localhost:8081'
 }));
 app.get("/",(req,res)=>{
-  res.send({status:"Started"})
+  res.send({status:"Started"})   
 
 })
 app.post("/register", async (req, res) => {
